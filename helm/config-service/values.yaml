@@ -4,7 +4,7 @@ replicaCount: 1
 
 image:
   repository: 879381276515.dkr.ecr.ap-northeast-2.amazonaws.com/aigungbu/service-images
-  tag: 297bed23ec9b824252ebfffc3caa753760a5d886
+  tag: 68816ae7910272bf3d021cb94948b4b67b4d264f
   pullPolicy: IfNotPresent
 
 containerPort: 80
@@ -12,3 +12,11 @@ containerPort: 80
 service:
   type: ClusterIP
   port: 80
+
+env:
+  - name: CONFIG_GIT_URI
+    value: __CONFIG_GIT_URI__
+  - name: CONFIG_GIT_USERNAME
+    value: __CONFIG_GIT_USERNAME__
+  - name: CONFIG_GIT_PASSWORD
+    value: __CONFIG_GIT_PASSWORD__
