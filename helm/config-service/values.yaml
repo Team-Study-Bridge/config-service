@@ -4,7 +4,7 @@ replicaCount: 1
 
 image:
   repository: 879381276515.dkr.ecr.ap-northeast-2.amazonaws.com/aigungbu/service-images
-  tag: f88c4d6bebc233f7880077e554f262c8a285d33a
+  tag: 45a07676e78fa88ff477763a61c3027b3ede04ad
   pullPolicy: IfNotPresent
 
 containerPort: 80
