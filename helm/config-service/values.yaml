@@ -4,7 +4,7 @@ replicaCount: 1
 
 image:
   repository: 879381276515.dkr.ecr.ap-northeast-2.amazonaws.com/aigungbu/service-images
-  tag: 68816ae7910272bf3d021cb94948b4b67b4d264f
+  tag: f88c4d6bebc233f7880077e554f262c8a285d33a
   pullPolicy: IfNotPresent
 
 containerPort: 80
@@ -15,8 +15,8 @@ service:
 
 env:
   - name: CONFIG_GIT_URI
-    value: __CONFIG_GIT_URI__
+    value: https://github.com/Team-Study-Bridge/config-repo
   - name: CONFIG_GIT_USERNAME
-    value: __CONFIG_GIT_USERNAME__
+    value: yjincode
   - name: CONFIG_GIT_PASSWORD
-    value: __CONFIG_GIT_PASSWORD__
+    value: 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
