@@ -3,7 +3,7 @@ name: config-service
 replicaCount: 1
 
 image:
-  repository: 879381276515.dkr.ecr.ap-northeast-2.amazonaws.com/aigungbu/service-images
+  repository: 879381276515.dkr.ecr.ap-northeast-2.amazonaws.com/aigongbu/service-images
   tag: 0850a74d2db92d6bad22192d38d13bbcc653c33d
   pullPolicy: IfNotPresent
 
