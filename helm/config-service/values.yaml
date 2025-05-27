@@ -15,8 +15,8 @@ service:
 
 env:
   - name: CONFIG_GIT_URI
-    value: https://github.com/Team-Study-Bridge/config-repo
+    value: __CONFIG_GIT_URI__
   - name: CONFIG_GIT_USERNAME
-    value: yjincode
+    value: __CONFIG_GIT_USERNAME__
   - name: CONFIG_GIT_PASSWORD
-    value: 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
+    value: __CONFIG_GIT_PASSWORD__
