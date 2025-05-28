@@ -22,9 +22,7 @@ service:
   port: 80
 
 env:
-  - name: CONFIG_GIT_URI
-    value: __CONFIG_GIT_URI__
-  - name: CONFIG_GIT_USERNAME
-    value: __CONFIG_GIT_USERNAME__
-  - name: CONFIG_GIT_PASSWORD
-    value: __CONFIG_GIT_PASSWORD__
+  - name: SPRING_PROFILES_ACTIVE
+    value: dev
+
+

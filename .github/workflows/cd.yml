@@ -42,12 +42,9 @@ jobs:
           docker tag $SERVICE_NAME:$IMAGE_TAG ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG
           docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG
 
-      - name: Update Helm values.yaml (image tag + Git secrets)
+      - name: Update Helm values.yaml with new image tag
         run: |
           sed -i "s|tag: .*|tag: $IMAGE_TAG|" $HELM_PATH
-          sed -i "s|__CONFIG_GIT_URI__|${{ secrets.CONFIG_GIT_URI }}|" $HELM_PATH
-          sed -i "s|__CONFIG_GIT_USERNAME__|${{ secrets.CONFIG_GIT_USERNAME }}|" $HELM_PATH
-          sed -i "s|__CONFIG_GIT_PASSWORD__|${{ secrets.CONFIG_GIT_PASSWORD }}|" $HELM_PATH
 
       - name: Create Pull Request
         id: cpr

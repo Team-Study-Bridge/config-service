@@ -29,10 +29,19 @@ spec:
                   - sh
                   - -c
                   - sleep 5
-          {{- if .Values.env }}
           env:
-            {{- range .Values.env }}
-            - name: {{ .name }}
-              value: {{ .value | quote }}
-            {{- end }}
-          {{- end }}
+            - name: CONFIG_GIT_URI
+              valueFrom:
+                secretKeyRef:
+                  name: config-service-secrets
+                  key: CONFIG_GIT_URI
+            - name: CONFIG_GIT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: config-service-secrets
+                  key: CONFIG_GIT_USERNAME
+            - name: CONFIG_GIT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: config-service-secrets
+                  key: CONFIG_GIT_PASSWORD
